@@ -6,8 +6,12 @@
   "main": "./lib/main",
   "dependencies": {
     "karma" : "*",
-    "karma-cli" : "*"
+    "karma-cli" : "*",
+    "karma-jasmine" : "*",
+    "karma-chrome-launcher" : "*",
+    "karma-ie-launcher" : "*"
   },
+  "repository" : { },
   "devDependencies": {},
   "optionalDependencies": {},
   "engines": {

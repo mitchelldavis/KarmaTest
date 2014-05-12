@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="RunKarmaTests" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+
+	<PropertyGroup>
+		<KarmaConfigFile Condition=" '$(KarmaConfigFile)' == '' ">karma.config.js</KarmaConfigFile>
+	</PropertyGroup>
+
+	<Target Name="RunKarmaTests">
+		<Exec Command="karma start &quot;$(KarmaConfigFile)&quot;"/>
+	</Target>
+
+</Project>
