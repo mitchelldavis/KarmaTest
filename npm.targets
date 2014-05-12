@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="NpmInstall" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+	<PropertyGroup>
+		<NpmTargetsLoaded Condition=" '$(NpmTargetsLoaded)' == '' ">true</NpmTargetsLoaded>
+	</PropertyGroup>
+
 	<Target Name="NpmInstall">
 		<Exec Command="npm install"/>
 	</Target>

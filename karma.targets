@@ -2,11 +2,18 @@
 <Project DefaultTargets="RunKarmaTests" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
 
 	<PropertyGroup>
+		<KarmaTargetsLoaded Condition=" '$(KarmaTargetsLoaded)' == '' ">true</KarmaTargetsLoaded>
 		<KarmaConfigFile Condition=" '$(KarmaConfigFile)' == '' ">karma.config.js</KarmaConfigFile>
 	</PropertyGroup>
 
-	<Target Name="RunKarmaTests">
+	<Target Name="RunKarmaTests" DependsOnTargets="NpmInstall">
+		<ItemGroup>
+			<KarmaExecutable Include="karma start"/>
+			<KarmaExecutable Include="&quot;$(KarmaConfigFile)&quot;"/>
+		</ItemGroup>
 		<Exec Command="karma start &quot;$(KarmaConfigFile)&quot;"/>
 	</Target>
+
+	<Import Condition=" '$(NpmTargetsLoaded)' == '' OR '$(NpmTargetsLoaded)' == 'false' " Project="npm.targets" />
 
 </Project>

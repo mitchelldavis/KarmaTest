@@ -1,1 +1,1 @@
-A simple example ap of how Karma JS works.
+A simple example app of how Karma JS works.

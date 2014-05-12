@@ -9,7 +9,8 @@
     "karma-cli" : "*",
     "karma-jasmine" : "*",
     "karma-chrome-launcher" : "*",
-    "karma-ie-launcher" : "*"
+    "karma-ie-launcher" : "*",
+    "karma-firefox-launcher" : "*"
   },
   "repository" : { },
   "devDependencies": {},
